@@ -15,3 +15,8 @@
   5. Adicionei uma classe errada! Suma com a classe 'wrongClass', utilizando JQuery
 */
 
+$('document').ready( () => {
+
+  $('*').css('font-family', 'Arial, sans-serif')
+
+})

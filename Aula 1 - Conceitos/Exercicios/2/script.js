@@ -7,23 +7,23 @@
 */
 
 
-$(document).ready(function () {
+$(document).ready( () => {
 
-  let bodyColor = $('body')
+  const bodyColor = $('body')
   bodyColor.css('background', 'white')
 
 
   let changeBg = () => {
 
     if (bodyColor[0].style.background == 'white') {
-      $('body').css('background', '#666')
+      $('body').css('background', '#666');
       $('h1')
         .text('Desligado')
         .css('color', 'white')
       $('.imagem').attr('src', 'https://media.giphy.com/media/HL1MeEq6XebEA/giphy.gif')
 
     } else {
-      $('body').css('background', 'white')
+      $('body').css('background', 'white');
       $('h1')
         .text('Ligado')
         .css('color', '#000')
@@ -33,6 +33,5 @@ $(document).ready(function () {
   }
 
   $('#botao').click(changeBg)
-
 
 })

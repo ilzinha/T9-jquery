@@ -1,17 +1,15 @@
-$(document).ready(function() {
+$(document).ready(function () {
 
-    $('p').html(`Olá é igual a 
-    <span class="cor">Hello</span>
-    <strong>Darkness</strong>
-    `
-    );
+    $('p').html(`Olá é a mesma coisa que 
+    <span class="cor">Hello</span> 
+    <strong>Darkness</strong>`);
 
-    $('li').addClass("margin")
+    $('li').addClass('margin');
 
-    $('li').removeClass("item1")
+    $('li').removeClass('item1');
 
-
-    $("p").click(function() {
-        $(this).toggleClass("destaque")
+    //nessa função, ao clicar em  qlqr elemento p, ele usa a função toggleClass, que adiciona uma classe e remove ela, sempre ao clicar
+    $('p').click(function () {
+        $(this).toggleClass('destaque')
     })
-})
+});

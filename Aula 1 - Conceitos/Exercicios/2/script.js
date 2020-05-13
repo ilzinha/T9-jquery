@@ -6,36 +6,32 @@
   - Extra: Modifiquem o estilo da página para ela ficar com a sua cara!
 */
 
-//jquery
 
-$(document).ready(function() {
+$(document).ready( () => {
 
   const bodyColor = $('body')
-  bodyColor.css('background', 'yellow')
+  bodyColor.css('background', 'white')
 
-  function changeBg() {
-    if(bodyColor[0].style.background == 'yellow') {
-      $('body').css('background', 'black');
+
+  let changeBg = () => {
+
+    if (bodyColor[0].style.background == 'white') {
+      $('body').css('background', '#666');
       $('h1')
-        .css('color', 'white')
         .text('Desligado')
-      $('.imagem').attr('src', "https://media.giphy.com/media/N4a7e1ftdbQWc/giphy.gif" )
+        .css('color', 'white')
+      $('.imagem').attr('src', 'https://media.giphy.com/media/HL1MeEq6XebEA/giphy.gif')
+
     } else {
-      $('body').css('background', 'yellow');
+      $('body').css('background', 'white');
       $('h1')
-        .css('color', 'black')
         .text('Ligado')
-      $('.imagem').attr('src', "https://media.giphy.com/media/3KVRMtLXfORVosk6TW/giphy.gif" )
+        .css('color', '#000')
+      $('.imagem').attr('src', 'https://media.giphy.com/media/3KVRMtLXfORVosk6TW/giphy.gif')
 
     }
   }
 
-$('#botao').click(function() {
-    changeBg()
-})
-
-//ou
-
-$('#botao').click(changeBg)
+  $('#botao').click(changeBg)
 
 })

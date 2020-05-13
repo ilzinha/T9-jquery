@@ -11,19 +11,15 @@ $(document).ready(function () {
 
 
     $('#botao-replicar').click(function () {
+            let nomeDigitado = $('#campo-nome').val();
+            console.log(nomeDigitado)
 
-    $("#campo-nome").keyup(function () {
-        let nomeDigitado = $('#campo-nome').val();
-
-        console.log(nomeDigitado)
-
-        
-            $('#texto-replicado').val('A desenvolvedora mais incrível desse ano será a...' + nomeDigitado)
+            if (nomeDigitado == '') {
+                alert('Preencha o campo')
+            } else {
+                $('#texto-replicado')
+                    .show('slow')
+                    .text(`A desenvolvedora mais incrível desse ano será a... ${nomeDigitado}!!!`)
+            }
         })
-
     })
-
-
-
-
-})
